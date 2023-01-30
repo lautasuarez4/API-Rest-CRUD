@@ -1,4 +1,4 @@
-package com.codigolautaro.app.rest.model;
+package com.codigolautaro.app.rest.models;
 
 import jakarta.persistence.*;
 
