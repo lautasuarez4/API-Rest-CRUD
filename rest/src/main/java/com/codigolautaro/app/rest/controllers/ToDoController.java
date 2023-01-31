@@ -32,6 +32,12 @@ public class ToDoController {
         return "Task Saved";
         }
 
+    @PostMapping(value = "/savetasks")
+    public String saveTasks (@RequestBody List<Task> tasks){
+        taskService.saveTasks(tasks);
+        return "Tasks Saved";
+    }
+
     @PutMapping(value = "/update/{id}")
     public String updateTask(@PathVariable long id, @RequestBody Task requestTask){
 

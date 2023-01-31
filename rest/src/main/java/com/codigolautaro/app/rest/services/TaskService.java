@@ -25,6 +25,12 @@ public class TaskService {
         toDoRepository.save(task);
     }
 
+    public void saveTasks(List<Task> tasks){
+        for (Task t : tasks){
+            toDoRepository.save(t);
+        }
+    }
+
     public boolean updateTask (Long id, Task request){
         try{
             Task taskToUpdate = toDoRepository.findById(id).get();
